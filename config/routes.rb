@@ -1,4 +1,4 @@
-ArchApp::Application.routes.draw do |map|
+ArchApp::Application.routes.draw do
   get "home/home"
 
   # The priority is based upon order of creation:
@@ -58,5 +58,5 @@ ArchApp::Application.routes.draw do |map|
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
-  map.root :controller => "home"  
+  root :to => 'home#home'  
 end
