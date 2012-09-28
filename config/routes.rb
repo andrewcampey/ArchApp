@@ -1,7 +1,5 @@
-ArchApp::Application.routes.draw do
+ArchApp::Application.routes.draw do |map|
   get "home/home"
-  
-	map.root :controller => "home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -59,4 +57,6 @@ ArchApp::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+
+  map.root :controller => "home"  
 end
