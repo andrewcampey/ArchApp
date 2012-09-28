@@ -1,7 +1,7 @@
 ArchApp::Application.routes.draw do
   get "home/home"
   
-	#map.home '', :controller => 'home', :action => 'home'
+	map.root :controller => 'home', :action => :home
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
