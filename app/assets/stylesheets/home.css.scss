@@ -2,6 +2,5 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-	background-image: url("assets/bg.jpg");
-	background-color: #267F00;
+	background: url(assets/bg.jpg) repeat-x #267F00;
 }
