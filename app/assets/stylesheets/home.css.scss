@@ -2,5 +2,5 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-	background: url(assets/bg.jpg) repeat-x #267F00;
+	background: url(<%= asset_path 'bg.jpg' %>) repeat-x #267F00;
 }
