@@ -1,4 +1,6 @@
 ArchApp::Application.routes.draw do
+  get "main/main"
+
   get "home/home"
 
   # The priority is based upon order of creation:
