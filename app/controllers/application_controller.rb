@@ -1,4 +1,4 @@
 class ApplicationController < ActionController::Base
-  include loginsystem
+  include 'login_system'
 
 end
