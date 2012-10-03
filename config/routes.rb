@@ -2,7 +2,7 @@ ArchApp::Application.routes.draw do
   get "main/main"
 
   get "home/home"
-
+  get "home/new"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
