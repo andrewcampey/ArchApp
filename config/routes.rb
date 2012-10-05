@@ -1,4 +1,6 @@
 ArchApp::Application.routes.draw do
+  get "home/newuser"
+
   get "main/main"
 
   get "home/home"
