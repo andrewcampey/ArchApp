@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   def home
   end
   
-  def new
+  def newuser
+	@user = User.new
   end
 end
