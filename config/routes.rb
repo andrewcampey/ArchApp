@@ -1,12 +1,13 @@
 ArchApp::Application.routes.draw do
-  get "home/newuser"
+  get "users/new"
 
   get "main/main"
 
   get "home/home"
-  get "home/new"
+  get "home/newuser"
+  get "home/create"
   
-  resources :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
