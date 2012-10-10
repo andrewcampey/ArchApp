@@ -1,12 +1,17 @@
 ArchApp::Application.routes.draw do
-  get "users/new"
+	resources :users
+	resources :sessions, only: [:new, :create, :destroy]
 
-  get "main/main"
-
-  get "home/home"
-  get "home/newuser"
-  get "home/create"
+	match '/signup',  to: 'users#new'
+	match '/signin',  to: 'sessions#new'
+	match '/signout', to: 'sessions#destroy', via: :delete
   
+	get "users/new"
+	get "users/create"
+
+	get "main/main"
+
+	get "home/home"  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
