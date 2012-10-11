@@ -6,7 +6,12 @@ ArchApp::Application.routes.draw do
 	match '/signout', to: 'sessions#destroy', via: :delete
 
 	get "site/dashboard"
-
+	get "site/settings"
+	get "site/clientlist"
+	get "site/joblist"
+	get "site/timesheet"
+	get "site/invoicing"
+	
 	post 'home/create' => 'home#create'
 	get "home/signup"
 	get "home/home"  
