@@ -3,7 +3,7 @@
 
 <div class="row">
   <div class="span6 offset3">
-    <%= form_for(@user) do |f| %>
+    <%= start_form_tag :action => 'create' %>
 
       <%= f.label :firstname %>
       <%= f.text_field :firstname %>
@@ -21,6 +21,6 @@
       <%= f.password_field :password_confirmation %>
 
       <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
-    <% end %>
+    <%= end_form_tag %>
   </div>
 </div>
