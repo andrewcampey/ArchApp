@@ -1,13 +1,9 @@
 ArchApp::Application.routes.draw do
-	resources :users, only: [:new, :create]
 	resources :sessions, only: [:new, :create, :destroy]
 	
 	match '/signup',  to: 'home#signup'
 	match '/signin',  to: 'sessions#new'
 	match '/signout', to: 'sessions#destroy', via: :delete
-  
-	get "users/new"
-	get "users/create"
 
 	get "site/dashboard"
 

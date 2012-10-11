@@ -8,18 +8,22 @@
 #  firstname       :string(255)
 #  lastname        :string(255)
 #  remember_token  :string(255)
+#  organisation_id :integer   
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
 
 class User < ActiveRecord::Base
-	attr_accessible :email, :firstname, :lastname, :password, :password_confirmation, :remember_token
+	belongs_to :organisation
+	
+	attr_accessible :email, :firstname, :lastname, :password, :password_confirmation, :remember_token, :organisation_id
 	has_secure_password
 
 	before_save :create_remember_token
 
 	validates :firstname,  presence: true
 	validates :lastname,  presence: true
+	validates :organisation_id,  presence: true
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	validates :email, presence:   true,
 					format:     { with: VALID_EMAIL_REGEX },

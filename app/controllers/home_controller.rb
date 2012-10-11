@@ -7,9 +7,14 @@ class HomeController < ApplicationController
 	end
 
 	def create
-		@user = User.new(params[:user])
+		@organisation = Organisation.new(params[:organisation])
+		@organisation.save
+		
+		p = params[:user]
+		p[:organisation_id] = @organisation.id
+		@user = User.new(p)
 		if @user.save
-		  redirect_to @user
+		  redirect_to '/signin'
 		else
 		  render 'signup'
 		end
