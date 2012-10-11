@@ -2,7 +2,7 @@ ArchApp::Application.routes.draw do
 	resources :users, only: [:new, :create]
 	resources :sessions, only: [:new, :create, :destroy]
 	
-	match '/signup',  to: 'users#new'
+	match '/signup',  to: 'home#signup'
 	match '/signin',  to: 'sessions#new'
 	match '/signout', to: 'sessions#destroy', via: :delete
   
@@ -11,6 +11,8 @@ ArchApp::Application.routes.draw do
 
 	get "site/dashboard"
 
+	post 'home/create' => 'home#create'
+	get "home/signup"
 	get "home/home"  
 
   # The priority is based upon order of creation:
